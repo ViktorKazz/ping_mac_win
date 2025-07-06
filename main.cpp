@@ -8,7 +8,6 @@
 #include <iostream>
 #include <cassert>
 
-
 #pragma comment(lib, "Ws2_32.lib")    // Линкуем WinSock
 #pragma comment(lib, "Iphlpapi.lib")  // Линкуем IP Helper API (включает IcmpSendEcho)
 
@@ -23,7 +22,6 @@ public:
     void PrintMAC(this Ping& object);
 
     int OnPing(this Ping& object,int argc, char** argv);
-
 
 private:
     ULONG m_MACAddr[2]{};
@@ -129,7 +127,6 @@ int Ping::OnPing(this Ping& object, int argc, char** argv)
 
 int main(int argc, char* argv[]) {
     
-
     Ping p;
     p.OnPing(argc, argv);
 
